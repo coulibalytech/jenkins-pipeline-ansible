@@ -9,7 +9,7 @@
       package: name=epel-release state=present
       when: ansible_distribution == "ubuntu"
     - name: install python-pip
-      yum: name=python-pip state=present update_cache=yes
+      apt: name=python-pip state=present update_cache=yes
     - name: Install docker python
       pip: name=docker-py
   tasks:
