@@ -7,7 +7,7 @@
   pre_tasks:
     - name: Install EPEL repo
       package: name=epel-release state=present
-      when: ansible_distribution == "CentOS"
+      when: ansible_distribution == "ubuntu"
     - name: install python-pip
       yum: name=python-pip state=present update_cache=yes
     - name: Install docker python
